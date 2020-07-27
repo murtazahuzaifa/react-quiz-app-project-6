@@ -2,3 +2,22 @@
   padding:0;
   margin:0;
 }
+
+body{
+  height: 100vh;
+  background: url("https://www.quizalize.com/blog/wp-content/uploads/2020/03/quizalize-classroom.png") ;
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App{
+  background-color: oldlace;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

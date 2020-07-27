@@ -19,5 +19,5 @@
     answer: string,
     totalQuestions: number,
     currentQuestion: number,
-    callback: (e:React.FormEvent<EventTarget>, ans:string) => void
+    callback: (correct:boolean) => void
  }

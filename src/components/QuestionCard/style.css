@@ -1,0 +1,15 @@
+.quiz-card-container{
+    /* background-color: sandybrown; */
+}
+
+.quiz-card-container > div{
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+}
+
+.option-btn{
+    /* background-color: black; */
+    padding: 5px;
+    color: black;
+}
