@@ -21,3 +21,8 @@
     currentQuestion: number,
     callback: (correct:boolean) => void
  }
+
+export type BtnProp = {
+    onClick: (e:React.MouseEvent<EventTarget>) => void;
+    children: any;
+}

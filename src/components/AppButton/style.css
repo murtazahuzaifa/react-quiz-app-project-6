@@ -1,6 +1,26 @@
 .button1{
-    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+    padding: 5px 10px;
+    /* background-color: rgb(186, 176, 253); */
+    background: linear-gradient(180deg, rgb(141, 124, 250) 10%, rgb(186, 176, 253) 50%, rgb(59, 38, 161) 140% );
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    border: 2px solid rgb(5, 60, 143);
+    box-shadow: 0px 0px 5px rgb(154, 92, 235);
 }
+.button1:hover{
+    background: linear-gradient(360deg, rgb(141, 124, 250) 10%, rgb(186, 176, 253) 50%, rgb(59, 38, 161) 140% );
+    box-shadow: 0px 0px 10px rgb(109, 3, 247);
+}
+
 /* .button2{
 
 } */

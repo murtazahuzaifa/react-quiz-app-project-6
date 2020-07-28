@@ -3,13 +3,6 @@ import { QuestionCardProp } from '../../Types/quiz_types';
 
 import './style.css';
 
-// const btnStyle = {
-//     btn: {
-//         backgroundColor: 'grey',
-//         padding:
-//     },
-// }
-
 const QuestionCard: React.FC<QuestionCardProp> = ({ question, options, answer, totalQuestions, currentQuestion, callback, }) => {
 
     const checkAnswer = () => { }
@@ -21,36 +14,35 @@ const QuestionCard: React.FC<QuestionCardProp> = ({ question, options, answer, t
     useEffect(() => {
         setSelectedAns(''); setSelectedBtn(-1); setUserClicked(false);
     }, [currentQuestion])
-    useEffect(()=>{
-        if (userClicked){ callback(selectedAns === answer) }
+    useEffect(() => {
+        if (userClicked) { callback(selectedAns === answer) }
     }, [userClicked])
 
     return (
         <div className='quiz-card-container'>
             <p>Question {currentQuestion}/{totalQuestions}</p>
-            <h3>{question}</h3>
+            <p>{question}</p>
             <div>
                 {options.map((option: string, id: number) => {
-                    const style = { btn: { backgroundColor: 'grey' } }
+                    let btnClass:string = '';
 
                     if (userClicked && selectedBtn === id && selectedAns === answer) {
-                        style.btn.backgroundColor = 'lightgreen';
+                        btnClass = 'correct';
                     } else if (userClicked && selectedBtn === id && selectedAns !== answer) {
-                        style.btn.backgroundColor = 'red';
+                        btnClass = 'incorrect';
                     } else {
-                        style.btn.backgroundColor = 'grey';
+                        btnClass = '';
                     }
 
                     if (userClicked && option === answer) {
-                        style.btn.backgroundColor = 'lightgreen';
+                        btnClass = 'correct';
                     }
 
                     return (
                         < button
-                            className='option-btn'
+                            className={`option-btn ${btnClass}`}
                             disabled={userClicked}
                             key={id}
-                            style={style.btn}
                             onClick={() => { setSelectedAns(option); setSelectedBtn(id); setUserClicked(true) }}
                         >
                             {option}
