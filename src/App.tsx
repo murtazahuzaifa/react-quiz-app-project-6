@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { getQuizDetails } from './services/quiz_service';
 import './App.css';
-import { Quiz, QuestionType } from './Types/quiz_types';
+import { QuestionType } from './Types/quiz_types';
 import QuestionCard from './components/QuestionCard';
 import { Button1 } from './components/AppButton';
 import { shuffleArray } from './utilities';
-import { spawn } from 'child_process';
 
 function App() {
 

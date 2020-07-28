@@ -5,7 +5,7 @@
 
 body{
   height: 100vh;
-  background: url("https://www.quizalize.com/blog/wp-content/uploads/2020/03/quizalize-classroom.png") ;
+  background: url("./images/bg.jpg");
   background-size: cover;
   background-position: center;
   margin: 0;

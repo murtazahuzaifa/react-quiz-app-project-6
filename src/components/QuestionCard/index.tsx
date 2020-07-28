@@ -5,18 +5,19 @@ import './style.css';
 
 const QuestionCard: React.FC<QuestionCardProp> = ({ question, options, answer, totalQuestions, currentQuestion, callback, }) => {
 
-    const checkAnswer = () => { }
-
     const [selectedAns, setSelectedAns] = useState<string>('');
     const [selectedBtn, setSelectedBtn] = useState<number>(-1);
     const [userClicked, setUserClicked] = useState<boolean>(false);
+    
+    const checkAnswer = () => {
+        if (userClicked) { callback(selectedAns === answer) }
+    }
 
     useEffect(() => {
         setSelectedAns(''); setSelectedBtn(-1); setUserClicked(false);
     }, [currentQuestion])
-    useEffect(() => {
-        if (userClicked) { callback(selectedAns === answer) }
-    }, [userClicked])
+    
+    useEffect(checkAnswer, [userClicked])
 
     return (
         <div className='quiz-card-container'>
